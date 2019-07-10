@@ -1,16 +1,39 @@
 package data.structure;
 
-import java.util.Stack;
-
 import data.structure.list.LinkedList;
+import data.structure.stack.Stack;
+import data.structure.tree.BinarySearchTree;
 
 public class Main {	
 	public static void main(String[] args) {
-		testLinkedList();
+//		testLinkedList();
 //		testStack();
+		testBST();
+	}
+	
+	private static void testBST() {
+		System.out.println("---------- Binary Search Tree Test ----------");
+		BinarySearchTree bst = new BinarySearchTree();
+		bst.insert(5);
+		bst.insert(3);
+		bst.insert(10);
+		bst.insert(2);
+		bst.insert(7);
+		bst.insert(9);
+		bst.insert(8);
+		bst.insert(4);
+		bst.print();
+		System.out.println("---------------------");
+//		stack.pop();
+//		stack.pop();
+//		stack.pop();
+//		stack.pop();
+//		stack.push(40);
+//		stack.print();
 	}
 	
 	private static void testStack() {
+		System.out.println("---------- Stack Test ----------");
 		Stack<Integer> stack = new Stack<>();
 		stack.push(3);
 		stack.push(5);
@@ -20,20 +43,18 @@ public class Main {
 		stack.push(9);
 		stack.push(8);
 		stack.push(4);
-
-		int size = stack.size();
-		for (int i=0; i<size; i++)
-			System.out.println(stack.pop());
-		stack.push(3);
-		stack.push(5);
-		stack.push(2);
-		stack.push(4);
-
-		size = stack.size();
-		for (int i=0; i<size; i++)
-			System.out.println(stack.pop());
+		stack.print();
+		System.out.println("---------------------");
+		stack.pop();
+		stack.pop();
+		stack.pop();
+		stack.pop();
+		stack.push(40);
+		stack.print();
 	}
+	
 	private static void testLinkedList() {
+		System.out.println("---------- Linked List Test ----------");
 		LinkedList<Integer> list = new LinkedList<>();
 		list.add(3);
 		list.add(5);
